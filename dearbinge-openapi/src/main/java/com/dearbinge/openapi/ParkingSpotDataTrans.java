@@ -24,7 +24,7 @@ import com.dearbinge.service.InfrastructDeal;
 @Controller
 @ImportResource({ "classpath:applicationContext.xml", "dubbo-services.xml" })
 @EnableAutoConfiguration
-public class ParkingSpotDataTrans extends WebMvcConfigurerAdapter {
+public class ParkingSpotDataTrans {
 	@Resource
 	private Map<String, InfrastructDeal> posDataServiceMap;
 	@Resource
@@ -88,8 +88,5 @@ public class ParkingSpotDataTrans extends WebMvcConfigurerAdapter {
 		}
 	}
 
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new UserSecurityInterceptor()).addPathPatterns("/syncParkingBasicData");
 
-	}
 }
