@@ -22,7 +22,7 @@ import com.dearbinge.security.interceptor.UserSecurityInterceptor;
 import com.dearbinge.service.InfrastructDeal;
 
 @Controller
-@ImportResource({ "classpath:applicationContext.xml", "dubbo-services.xml" })
+@ImportResource({ "classpath:applicationContext.xml", "classpath:dubbo-services.xml" })
 @EnableAutoConfiguration
 public class ParkingSpotDataTrans {
 	@Resource

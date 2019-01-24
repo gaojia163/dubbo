@@ -22,6 +22,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/user/")
+//@ImportResource({ "classpath:applicationContext.xml", "classpath:dubbo-services.xml" })
+@EnableAutoConfiguration
 public class UserSecurity {
 	@Resource
 	private Map<String, InfrastructDeal> posDataServiceMap;
