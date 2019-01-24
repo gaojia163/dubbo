@@ -26,7 +26,7 @@ public class App {
 	public static void main(String[] args) throws IOException {
 
 		CloseableHttpClient httpclient = HttpClients.createDefault();
-		String apiUrl = "http://localhost:8082/syncParkingBasicData";
+		String apiUrl = "http://localhost:80/syncParkingBasicData";
 		HttpPost httpPost = new HttpPost(apiUrl);
 		List<NameValuePair> listPair = new ArrayList<NameValuePair>();
 		// 填入各个表单域的值

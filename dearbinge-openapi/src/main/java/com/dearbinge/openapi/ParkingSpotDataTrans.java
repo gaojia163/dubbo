@@ -54,7 +54,7 @@ public class ParkingSpotDataTrans {
 			HttpSession session = request.getSession();
 			session.setAttribute("username", "chubin");
 			response.getWriter().write(
-					"this is node3, port:8082,address:" + InetAddress.getLocalHost() + ",sessionid:" + session.getId());
+					"this is node3, port:80,address:" + InetAddress.getLocalHost() + ",sessionid:" + session.getId());
 		} catch (IOException ex) {
 		}
 	}
@@ -64,7 +64,7 @@ public class ParkingSpotDataTrans {
 		try {
 			HttpSession session = request.getSession();
 			response.getWriter()
-					.write("this is node3, port:8082,address:" + InetAddress.getLocalHost() + ",attribute:"
+					.write("this is node3, port:80,address:" + InetAddress.getLocalHost() + ",attribute:"
 							+ (session == null ? "no session found"
 									: (session.getAttribute("username") == null ? "no attribute found"
 											: session.getAttribute("username").toString())));

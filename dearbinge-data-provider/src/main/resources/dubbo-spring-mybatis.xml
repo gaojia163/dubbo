@@ -6,11 +6,16 @@
     http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-4.0.xsd   
 	http://code.alibabatech.com/schema/dubbo         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+	<!-- 引入配置文件 -->
+	<bean id="propertyConfigurer"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:config" />
+	</bean>
 	<!-- 提供方应用信息，用于计算依赖关系 -->
 	<dubbo:application name="dearbinge-parkingspot-provider" />
 
 	<!-- 使用multicast广播注册中心暴露服务地址 -->
-	<dubbo:registry protocol="zookeeper" address="10.23.1.186:2181" />
+	<dubbo:registry protocol="zookeeper" address="${zookeeperAddress}" />
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20880" />
 

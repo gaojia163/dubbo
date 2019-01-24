@@ -7,3 +7,5 @@ maxActive=20
 maxIdle=20
 minIdle=1
 maxWait=60000
+#zookeeperAddress=10.23.1.186:2181
+zookeeperAddress=18.136.53.110:2181

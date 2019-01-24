@@ -55,7 +55,7 @@ public class UserSecurity {
 			HttpSession session = request.getSession();
 			session.setAttribute("code", RandomUtil.generateString(24));
 			response.getWriter().write(
-					"this is node3, port:8082,address:" + InetAddress.getLocalHost() + ",sessionid:" + session.getId());
+					"this is node3, port:80,address:" + InetAddress.getLocalHost() + ",sessionid:" + session.getId());
 		} catch (IOException ex) {
 		}
 	}
